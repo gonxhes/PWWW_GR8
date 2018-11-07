@@ -1,0 +1,18 @@
+*{		margin:0px;
+   font-family: sans-serif;
+}
+.nav1, a{
+	text-decoration: none;
+	color: #26647d;
+}
+.info{
+    float: right;
+}
+.nav1{
+	background-color: #558f9d;
+	padding: 10px;
+}
+.nav1 hr{
+	border: 0.7px solid #26647d;
+	margin: 8px;
+}
