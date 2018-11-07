@@ -16,3 +16,31 @@
 	border: 0.7px solid #26647d;
 	margin: 8px;
 }
+
+.nav2 h1{
+	color: white;
+}
+hr{
+	color: black;
+}
+.nav2{
+    background-color: #558f9d;
+    padding-left: 15px;
+    padding-bottom: 15px;
+
+}
+
+.table{ color: #8fb5bd;
+	    padding-left: 15px;
+		text-align: left;
+		width:16.6%; 
+		border-left: 2px solid #629caa;}
+
+.table p{color: #e5e0cc;}
+#product{
+	color: #24627b;
+}
+
+#description{
+	color: #26647d;
+}
