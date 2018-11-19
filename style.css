@@ -62,12 +62,23 @@ hr{
 	margin-left: 15px;
 	width: 400px;
 }
+.section11 a{
+	color: #cf6d50;
+	background-color: #f1e6b8;
+	padding: 10px 20px;
+	
+}
+.section11 p:nth-child(2) {
+	line-height: 27px;
+}
 .section12{
     
 	width: 500px;
 	height: 300px;
 	background-color: #333333;
-	float: right;
+    position: absolute;
+    top: 180px;
+    left: 800px;
 	
 
 }
