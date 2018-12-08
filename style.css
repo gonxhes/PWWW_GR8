@@ -21,9 +21,6 @@
 .nav2 h1{
 	color: #e5e0cc;;
 }
-hr{
-	color: black;
-}
 .nav2{
     background-color: #558f9d;
     padding-left: 15px;
@@ -53,6 +50,7 @@ hr{
 	border-bottom: 2px solid black;
 	height: 600px;
 	color: #333333;
+
 }
 #title{
 	font-size: 60px;
@@ -60,7 +58,7 @@ hr{
 .section11{
 	margin-top: 30px;
 	margin-left: 15px;
-	width: 400px;
+	width: 450px;
 }
 .section11 a{
 	color: #cf6d50;
@@ -79,6 +77,46 @@ hr{
     position: absolute;
     top: 180px;
     left: 800px;
-	
 
+}
+#title1{
+	text-align: center;
+}
+#hrcontact{
+	margin: 0px 100px 0px 100px;
+
+}
+
+#container{	
+	text-align: left;
+	background-color: pink;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+ }
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+input[type=text], input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.contactform{
+	
 }
