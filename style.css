@@ -120,9 +120,8 @@
 
 #container{	
 	text-align: left;
-	background-color: pink;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #ffe0cc;
     padding: 20px;
     width: 60%;
     margin: auto;
@@ -313,4 +312,7 @@ input[type=text], input[type=email], select, textarea{
 #leftdiv{
 	float: left;
 	margin-left: 47px;
+}
+.lista{
+	list-style-type: square;
 }
