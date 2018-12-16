@@ -311,6 +311,7 @@ input[type=text], input[type=email], select, textarea{
 #leftdiv{
 	float: left;
 	margin-left: 47px;
+<<<<<<< HEAD
 }	
 .lista{
 	list-style-type: square;
@@ -344,3 +345,9 @@ input[type=text], input[type=email], select, textarea{
 	margin: -20px;
 	padding: 20px;
 }
+=======
+}
+.lista{
+	list-style-type: square;
+}
+>>>>>>> 6d82eef2b4193a30057d867b7592218fdacdf317
