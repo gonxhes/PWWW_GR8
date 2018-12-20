@@ -1,5 +1,5 @@
 *{		margin:0px;
-   font-family: sans-serif;
+   font-family: "Times New Roman", Times, serif;
    
 }
 
@@ -64,17 +64,20 @@
 
 .section1{
 	background-color: #f7f1d7;
-	border-top: 1px solid black;
+	border-top: 2px solid black;
 	padding-top: 50px;
-	border-bottom: 1px solid black;
+	border-bottom: 2px solid black;
 	color: #333333;
     position: relative;
     width: 100%;
     top: 51px;
+    padding-bottom: 30px;
 
 }
 #title{
 	font-size: 60px;
+	color: #333333;
+
 }
 .section11{
 	width:100%;
@@ -125,7 +128,7 @@
 	display: inline-block;
 	width:300px;
 	margin-left:200px;
-	border: 1px solid black;
+	
 }
 
 #title1{
@@ -202,10 +205,11 @@ input[type=text], input[type=email], select, textarea{
 }
 
 .section33{
+	padding-top: 25px;
 	background-color: #eae6d6;
 }
 .section33 h1{
-	font-family: "Times New Roman", Times, serif;
+	
 	font-weight: lighter;
 
 }
@@ -217,14 +221,46 @@ input[type=text], input[type=email], select, textarea{
 	display: inline-block;
 	width:300px;
 	margin-left:200px;
+	text-align: justify;
+	
 	
 }
 
-.section33 img{
-	border:1px solid black;
-	margin-top:10px;
-	padding: 5px;
+.section33 hr{
+		margin-top:15px;
+		margin-bottom: 15px;
+
 }
+
+.section33a img{
+	border:1px solid black;
+	padding: 5px;
+	margin-right: 15px;
+
+}
+
+.section33a figcaption{
+	font-size: 12px;
+	line-height: 19px;
+	color: #666666;
+	font-family: "Verdana";
+	margin-right: 15px;
+
+}
+
+.section33a a{
+	color:#ce6c50;
+	font-size: 12px;
+	line-height: 19px;
+	font-family: "Verdana";
+	margin-right: 15px;
+}
+
+.section33a a:hover{
+	text-decoration: none;
+
+}
+
 
 
 /*.footerdiv{
