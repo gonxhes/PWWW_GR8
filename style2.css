@@ -1,8 +1,11 @@
 body{   margin: 0px;
-	    background-color: white;
-        /*background-attachment: fixed;*/
+	    background-color: #ebebe0;
+        background-attachment: fixed;
         background-size: cover;
-        background-image: url("images/background.jpg");
+}
+.nav1, a{
+	background-color: rgb(13, 13, 13);
+	color: white;
 }
 .banner{		
 		width: 720px;
@@ -11,14 +14,11 @@ body{   margin: 0px;
         background-color: white;
         opacity: 0.6;
         font-weight: bolder;
-        align-self: center;
         margin: auto;
-        position: relative;
-        top: 230px;
+        position: absolute;	
+        top: 230px; 
+        left: 370px;
     }
-    h3{
-	opacity: 1;
-}
 .banner ol{
 	line-height: 30px;
 }
@@ -26,4 +26,32 @@ body{   margin: 0px;
 		text-align: center;
 		font-style: italic;
 
+}
+ .newsbelow{ 
+ 		width:60%;
+        margin:auto;
+        background-color: white;
+        padding: 10px 30px;
+        text-align: center;
+        align-items: center;
+}
+.newsbelow img{
+	width: 800px;
+	height: 500px;
+}
+.newsbelow p{
+	font-size: 20px;
+}
+#date{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.newsbelow hr{
+	margin-top: 60px;	
+	margin-bottom: 60px;
+}
+.middle img { 
+	    position: fixed;
+	    top: 620px;   
+	    left: 1313px;
 }
