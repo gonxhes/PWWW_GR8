@@ -17,7 +17,7 @@ body{   margin: 0px;
         margin: auto;
         position: absolute;	
         top: 230px; 
-        left: 370px;
+        left: 294px;
     }
 .banner ol{
 	line-height: 30px;
@@ -54,4 +54,13 @@ body{   margin: 0px;
 	    position: fixed;
 	    top: 620px;   
 	    left: 1313px;
+}
+#continuebutton{
+	border: none;
+	font-size: 15px;
+	color: white;
+	background-color: black;
+	padding: 5px 15px;
+	border-radius: 5px;
+	cursor: pointer;
 }
