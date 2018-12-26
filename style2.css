@@ -33,7 +33,6 @@ body{   margin: 0px;
         background-color: white;
         padding: 10px 30px;
         text-align: center;
-        align-items: center;
 }
 .newsbelow img{
 	width: 800px;
@@ -52,8 +51,9 @@ body{   margin: 0px;
 }
 .middle img { 
 	    position: fixed;
-	    top: 620px;   
-	    left: 1313px;
+	   bottom: 2px;
+	   right: 2px;
+	    float: right;
 }
 #continuebutton{
 	border: none;

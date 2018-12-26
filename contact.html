@@ -5,15 +5,15 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
+   <!--      <script>
 function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
+  var x = document.forms["contactforma"]["fname"].value;
   if (x == "") {
     alert("Name must be filled out");
     return false;
   }
 }
-</script>
+</script> -->
     </head>
     <body>  <header>
             <div class="nav1">
@@ -62,6 +62,7 @@ function validateForm() {
            <input type="text" name="firstname" placeholder="Your name.." required>
            <label>Last Name: </label>
            <input type="text" name="lastname" placeholder="Your last name..">
+          
            <label>Email: </label>
            <input type="email" name="emailaddress" placeholder="Email.." multiple>
            <label>Subject: </label>
@@ -73,6 +74,20 @@ function validateForm() {
               <option value="reason4">I can't find a product</option>
               <option value="reason5">Other</option>
            </select>
+            <label>Age: </label>
+           <input type="radio" name="age" value="under 18">
+           <label>Under 18</label>
+           <input type="radio" name="age" value="19 to 30">
+           <label>19 to 30</label>
+           <input type="radio" name="age" value="31 to 50">
+           <label>31 to 50</label> <br><Br>
+          <label>How would you like us to respond: </label>
+           <input type="checkbox" name="answer">
+           <label>Email</label>
+           <input type="checkbox" name="answer">
+           <label>Text Message</label>
+           <input type="checkbox" name="answer">
+           <label>Call</label><br><br>
            <label>Message: </label>
            <textarea id="message" placeholder="Write something.. " style="height: 120px;" required></textarea>
            <input type="submit" value="Send Message">

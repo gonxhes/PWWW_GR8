@@ -6,6 +6,33 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- <script type="text/javascript"> 
+        var currentdate = new Date();
+        var datetime =  currentdate.getDate() + "/" + (currentdate.getMonth()+1) + "/" + currentdate.getFullYear()+ " "+currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+        document.write(datetime);
+        </script> -->
+<script type="text/javascript">
+function setbackground()
+{
+window.setTimeout("setbackground()", 5000); // 5000 milliseconds delay
+
+var index = Math.round(Math.random() * 4);
+
+var ColorValue;
+if(index == 1)
+ColorValue = "ffe6ff"; //lightpink
+if(index == 2)
+ColorValue = "ffffcc"; //lightyellow
+if(index == 3)
+ColorValue = "ebfafa"; //babyblue
+if(index == 4)
+ColorValue = "e6ffcc"; //lightgreen
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+<body onload="setbackground();">
     </head>
     <body>  
         <header>
@@ -85,7 +112,7 @@ Your browser does not support the audio element.
   </div>
     <div class="middle" align="right">
  <a href="#top">
-  <img src="images/top.png"></a>
+  <img src="images/top.png" alt="top" title="Go to the top"></a>
 </div>
 
 </body>

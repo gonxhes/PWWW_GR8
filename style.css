@@ -164,7 +164,11 @@ input[type=text], input[type=email], select, textarea{
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-}#container2	{	
+}
+input[type=radio], input[type=checkbox]{
+	margin-left: 40px;
+}
+#container2	{	
 	text-align: center;
     width: 60%;
     margin: auto;
