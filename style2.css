@@ -1,11 +1,6 @@
 body{   margin: 0px;
-	    background-color: #ebebe0;
         background-attachment: fixed;
         background-size: cover;
-}
-.nav1, a{
-	background-color: rgb(13, 13, 13);
-	color: white;
 }
 .banner{		
 		width: 720px;
@@ -64,3 +59,20 @@ body{   margin: 0px;
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+.column {
+        width: 90%;
+        margin: auto;   
+        margin-top: 50px;
+        background-color: #fff5cc;  
+}
+.content {
+       padding: 25px;
+       text-align: justify;
+
+}
+.text{
+		float: right;
+        width: 45%;
+        height: 200px;
+  }
