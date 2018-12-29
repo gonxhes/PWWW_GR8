@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="section11b">
-                        <img src="images/img1.jpg" width="500" height="300" alt="Foto e teknologjise">
+                        <img name="slide" src="images/img1.jpg" width="500" height="300" alt="Foto e teknologjise">
                        
                     </div>
             
@@ -140,4 +140,32 @@
                 <div class="footerdiv"> </div>
             </footer>
 </body>
+<script type="text/javascript">
+    var i=0;
+    var images =[];
+    var time = 1000;
+
+    images[0] = "images/review1.jpg";
+    images[1] = "images/review2.jpg";
+    images[2] = "images/review3.jpg";
+    images[3] = "images/review4.jpg";
+    function changeImage() {
+        document.slide.src = images[i];
+
+            if(i < images.length - 1){
+      // Add 1 to Index
+      i++; 
+    } else { 
+        // Reset Back To O
+        i = 0;
+    }
+
+    // Run function every x seconds
+    setTimeout("changeImage()", time);
+}
+
+// Run function when page loads
+window.onload=changeImage;
+    
+</script>
 </html>

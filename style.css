@@ -113,6 +113,11 @@
 	padding-right: 20px;
 	
 }
+
+.section11b img{
+	border:2px solid #a7a7a7;
+	padding:2px;
+}
 /*.section22{
 	display: flex;
 	padding-left: 20px;
@@ -133,6 +138,11 @@
 	width:300px;
 	margin-left:200px;
 	
+}
+
+.section22a img{
+	border:2px solid #a7a7a7;
+	padding:2px;
 }
 
 #title1{
