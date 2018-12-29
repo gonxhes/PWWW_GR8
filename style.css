@@ -5,7 +5,7 @@
 
 .nav1, .nav2{
 	background-color: #558f9d;
-	background-image: linear-gradient(to right, rgb(85,143,157),rgb(145,185,195), rgb(167,199,207));
+	background-image: linear-gradient(to right, rgb(85,143,157),rgb(102,154,166),rgb(85,143,157));
 }
 
 .nav1, a{
@@ -76,6 +76,7 @@
     width: 100%;
     top: 51px;
     padding-bottom: 30px;
+
 
 }
 #title{
