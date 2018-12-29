@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text Typing Effect</title>
+    <link rel="stylesheet" href="emailstyle.css">
+  </head>
+  <body>
+
+    <div id="sentence">
+
+    </div>
+
+<script type="text/javascript">
+  var i=0,sentence;
+  sentence = "Thank you for your email!";
+
+  function typing() {
+    if(i<sentence.length){
+      document.getElementById("sentence").innerHTML += sentence.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+  typing();
+</script>
+
+
+  </body>
+</html>

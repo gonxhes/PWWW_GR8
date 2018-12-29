@@ -144,6 +144,7 @@
 .section22a img{
 	border:2px solid #a7a7a7;
 	padding:2px;
+	margin:1px;
 }
 
 #title1{
@@ -257,6 +258,7 @@ input[type=text], input[type=email], select, textarea{
 .section33a img{
 	border:1px solid black;
 	padding: 5px;
+	margin:1px;
 	margin-right: 15px;
 
 }
