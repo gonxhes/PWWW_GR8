@@ -3,11 +3,6 @@
    
 }
 
-.nav1, .nav2{
-	background-color: #558f9d;
-	background-image: linear-gradient(to right, rgb(85,143,157),rgb(102,154,166),rgb(85,143,157));
-}
-
 .nav1, a{
 	text-decoration: none;
 	color: #26647d;
@@ -21,7 +16,7 @@
     padding-right: 30px;
 }
 .nav1{
-	z-index: 1;
+	background-color: #558f9d;
 	width: 100%;
 	padding-top: 15px;
 	padding-left: 15px;
@@ -40,6 +35,7 @@
 	color: #e5e0cc;
 }
 .nav2{
+     background-color: #558f9d;
      padding: 10px;
      position: relative;	
      top: 50px;
@@ -77,9 +73,8 @@
     top: 51px;
     padding-bottom: 30px;
 
-
 }
-#title{
+#title{ 
 	font-size: 60px;
 	color: #333333;
 
@@ -114,11 +109,6 @@
 	padding-right: 20px;
 	
 }
-
-.section11b img{
-	border:2px solid #a7a7a7;
-	padding:2px;
-}
 /*.section22{
 	display: flex;
 	padding-left: 20px;
@@ -141,12 +131,6 @@
 	
 }
 
-.section22a img{
-	border:2px solid #a7a7a7;
-	padding:2px;
-	margin:1px;
-}
-
 #title1{
 	text-align: center;
 }
@@ -160,7 +144,7 @@
     padding: 20px;
     width: 60%;
     margin: auto;
-    margin-top: 20px;
+	margin-top:55px;
  }
 
 input[type=submit] {
@@ -211,7 +195,7 @@ input[type=text], input[type=email], select, textarea{
          }
 .about-wrapper{
 	background-image: linear-gradient(to right, rgb(255, 255, 204), rgb(255, 181, 102));
-	margin: -20px;
+	margin: 10px;
 	padding: 20px;
 }
 .contact-wrapper{
@@ -223,7 +207,6 @@ input[type=text], input[type=email], select, textarea{
 .section33{
 	padding-top: 25px;
 	background-color: #eae6d6;
-
 }
 .section33 h1{
 	
@@ -234,8 +217,6 @@ input[type=text], input[type=email], select, textarea{
 .section33 div:first-child{
 	margin-left:20px;
 }
-
-
 .section33a {
 	display: inline-block;
 	width:300px;
@@ -244,15 +225,16 @@ input[type=text], input[type=email], select, textarea{
 	
 	
 }
-.section33a hr{
+
+.section33 hr{
 		margin-top:15px;
 		margin-bottom: 15px;
+
 }
 
 .section33a img{
 	border:1px solid black;
 	padding: 5px;
-	margin:1px;
 	margin-right: 15px;
 
 }
@@ -271,7 +253,6 @@ input[type=text], input[type=email], select, textarea{
 	font-size: 12px;
 	line-height: 19px;
 	font-family: "Verdana";
-	margin-right: 15px;
 }
 
 .section33a a:hover{
@@ -279,97 +260,56 @@ input[type=text], input[type=email], select, textarea{
 
 }
 
-.section33b{
-	width:66.6%;
-	margin-left: 20px;
-	display: inline-block;
+.about-boxet{
+	width:100%;
+	height:600px;
+	float:left;
+	margin-top:35px;
 
 }
-.section33c{ 
-	margin-left: 100px;
-	width: 300px;
-	margin-right: 15px;	
-	display: inline-block;
-	text-align: justify;
+
+.about-box{
+	width:20%;
+	height:250px;
+	float:left;
+	margin-left:31px;
+	background-color:#f9f9f9;
+	font-weight: 300;
+	margin-bottom: 31px;
+    color: #666;
 }
 
-.section33c img{
-	border:1px solid black;
-	padding: 5px;
-	margin-right: 15px;
-}
-.section33c figcaption{
-	
-	font-size: 24px;
-	color: #000000;
-	font-family: "Deja Vu Sans";
-	line-height: 19px;
-	margin-right: 15px;
-	padding-top: 15px;
- 
+#abt1{
+	margin-left:  100px;
 }
 
-.section33c hr{
-	padding:0px;
-	width: 300px;
-	margin-top: 40px;
-	margin-bottom: 5px;
+.about-foto{
+margin-top:19px;
+width:100%;
+height:100%;
 }
 
-.section33b p{
-	font-size: 12px;
-	line-height: 19px;
-	color: #666666;
-	font-family: "Verdana";
-	margin-right: 15px;
-}
- .section33b a{
-	color:#ce6c50;
-	font-size: 12px;
-	line-height: 19px;
-	font-family: "Verdana";
-	margin-right: 15px;
-	
-}
+.ab-titulli{margin-top:20px;}
+p{margin-top:10px;}
 
-.section33b a:hover{
-	text-decoration: none;
+h4{
+
+	text-align: center;
+	font-size:17px;
+	font-weight: 300;
+	color: #666;
+	font-weight:bold;
+
 
 }
-.section33c p{
-	font-size: 12px;
-	color: #666666;
-	font-family: "Verdana";
-	line-height: 19px;
-	position: relative;
-	bottom: 10px;
-}
-
-.section33c a{
-	color:#ce6c50;
-	font-size: 12px;
-	font-family: "Verdana";
-	text-align: left;
-	float: right;
-	margin-bottom: 20px;
-	margin-top: 15px;
-}
-
-.section33c a:hover{
-	text-decoration: none;
-
-}
-.footerdiv{
+/*.footerdiv{
      	background-color: #d7d3ad;
       	width: 100%;
       	height: 20px;
       	padding-top: 10px;
       	padding-bottom: 10px;
-         }
-.footerdiv p:first-child{
-		padding-left: 20px;
-}
-.footerdiv p:nth-child(2){
-	padding-right: 20px;
-	margin-top: -15px;
-}
+      	position: relative;
+      	bottom: 10px;
+    	
+         }*/
+
