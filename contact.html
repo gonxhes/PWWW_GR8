@@ -5,15 +5,68 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!--      <script>
+        <script>
 function validateForm() {
-  var x = document.forms["contactforma"]["fname"].value;
-  if (x == "") {
+  //Validimi i Emrit
+  var x = document.forms["contactform"]["firstname"].value;
+  if (x == null || (x.charAt(0) == " ")) {
     alert("Name must be filled out");
     return false;
   }
+  //Validimi i Mbiemrit
+  var x = document.forms["contactform"]["lastname"].value;
+  if (x == "" || (x.charAt(0) == " ")) {
+    alert("Lastname must be filled out");
+    return false;
+  }
+  //Validimi i email
+  var x = document.forms["contactform"]["email"].value;
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactform.x.value))
+  {
+    return true;
+  }
+    alert("Email address must be valid")
+    return false;
 }
-</script> -->
+  //Validimi i Moshes - radio button
+    var age = document.getElementsByName('age');
+        var ageValue = false;
+
+        for(var i=0; i<age.length;i++){
+            if(age[i].checked == true){
+                ageValue = true;    
+            }
+        }
+        if(!ageValue){
+            alert("Age must be choosen");
+            return false;
+        }
+    //Validimi i pergjigjjes - checkbox
+        var answer = document.getElementsByName('answer');
+        var ansValue = false;
+
+        for(var i=0; i<answer.length;i++){
+            if(answer[i].checked == true){
+                ansValue = true;    
+            }
+        }
+        if(!ansValue){
+            alert("An answer must be choosen");
+            return false;
+        }
+    //Validimi i mesazhit - textarea
+       if (document.getElementById("message").value == "" ) {
+       alert("Message must be filled out");
+       return false;
+        }
+    //Validimi i select - opsioneve
+       if (document.getElementById("subject").selectedIndex == 0) {
+       alert("A subject must be choosen");
+       return false;
+     }
+     return true;
+}
+</script> 
     </head>
     <body>  <header>
             <div class="nav1">
@@ -56,17 +109,17 @@ function validateForm() {
        <h1 id="title1">Contact</h1><br><hr id="hrcontact"> 
 <div id="container1" align="center">
     <div class="contact-wrapper">
-       <form class="contactform" action="thankyou.html" name="contactform">
+       <form class="contactform" action="thankyou.html" name="contactform" onsubmit="return validateForm()">
         
            <label>Name:</label>
-           <input type="text" name="firstname" placeholder="Your name.." required>
+           <input type="text" name="firstname" placeholder="Your name.." >
            <label>Last Name: </label>
            <input type="text" name="lastname" placeholder="Your last name..">
           
            <label>Email: </label>
-           <input type="email" name="emailaddress" placeholder="Email.." multiple>
+           <input type="email" name="email" placeholder="Email.." multiple>
            <label>Subject: </label>
-           <select id="subject" name="reason" required>
+           <select id="subject" name="reason" >
             <option value="hidden" selected disabled hidden>Choose here..</option>
               <option value="reason1">I have problems with my phone</option>
               <option value="reason2">I don't know how to use my TV</option>
@@ -89,7 +142,7 @@ function validateForm() {
            <input type="checkbox" name="answer">
            <label>Call</label><br><br>
            <label>Message: </label>
-           <textarea id="message" placeholder="Write something.. " style="height: 120px;" required></textarea>
+           <textarea id="message" placeholder="Write something.. " style="height: 120px;"></textarea>
            <input type="submit" value="Send Message">
        </form>
      </div></div>
