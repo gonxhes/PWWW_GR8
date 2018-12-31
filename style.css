@@ -195,8 +195,8 @@ input[type=text], input[type=email], select, textarea{
          }
 .about-wrapper{
 	background-image: linear-gradient(to right, rgb(255, 255, 204), rgb(255, 181, 102));
-	margin: 10px;
 	padding: 20px;
+	margin: -20px;
 }
 .contact-wrapper{
 	background-image: radial-gradient(closest-side at 70% 50%, rgb(191, 128, 255), rgb(161, 196, 196), rgb(239, 245, 245));
@@ -274,7 +274,6 @@ input[type=text], input[type=email], select, textarea{
 	float:left;
 	margin-left:31px;
 	background-color:#f9f9f9;
-	font-weight: 300;
 	margin-bottom: 31px;
     color: #666;
 }
@@ -290,9 +289,10 @@ height:100%;
 }
 
 .ab-titulli{margin-top:20px;}
-p{margin-top:10px;}
+.about-boxet p{margin-top:10px;
+				color: orange;}
 
-h4{
+.about-boxet h4{
 
 	text-align: center;
 	font-size:17px;
