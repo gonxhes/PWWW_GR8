@@ -9,7 +9,7 @@
 function validateForm() {
   //Validimi i Emrit
   var x = document.forms["contactform"]["firstname"].value;
-  if (x == null || (x.charAt(0) == " ")) {
+  if (x == "" || (x.charAt(0) == " ")) {
     alert("Name must be filled out");
     return false;
   }
@@ -19,19 +19,22 @@ function validateForm() {
     alert("Lastname must be filled out");
     return false;
   }
-  //Validimi i email
-  var x = document.forms["contactform"]["email"].value;
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(contactform.x.value))
-  {
-    return true;
-  }
-    alert("Email address must be valid")
+  //Validimi i Email
+    var x = document.forms["contactform"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    alert("Not a valid e-mail address");
     return false;
-}
+  }
+  //Validimi i select - opsioneve
+       if (document.getElementById("subject").selectedIndex == 0) {
+       alert("A subject must be choosen");
+       return false;
+     }
   //Validimi i Moshes - radio button
     var age = document.getElementsByName('age');
         var ageValue = false;
-
         for(var i=0; i<age.length;i++){
             if(age[i].checked == true){
                 ageValue = true;    
@@ -44,7 +47,6 @@ function validateForm() {
     //Validimi i pergjigjjes - checkbox
         var answer = document.getElementsByName('answer');
         var ansValue = false;
-
         for(var i=0; i<answer.length;i++){
             if(answer[i].checked == true){
                 ansValue = true;    
@@ -59,15 +61,10 @@ function validateForm() {
        alert("Message must be filled out");
        return false;
         }
-    //Validimi i select - opsioneve
-       if (document.getElementById("subject").selectedIndex == 0) {
-       alert("A subject must be choosen");
-       return false;
-     }
-     return true;
-}
+      }
+
 </script> 
-    </head>
+    </head> 
     <body>  <header>
             <div class="nav1">
           <a href="index.html">Home</a> |
@@ -142,7 +139,7 @@ function validateForm() {
            <input type="checkbox" name="answer">
            <label>Call</label><br><br>
            <label>Message: </label>
-           <textarea id="message" placeholder="Write something.. " style="height: 120px;"></textarea>
+           <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
            <input type="submit" value="Send Message">
        </form>
      </div></div>
