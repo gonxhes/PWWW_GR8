@@ -33,27 +33,18 @@ input[type=text]:focus {
 
         </style>
 <script type="text/javascript">
-function setbackground()
-{
-window.setTimeout("setbackground()", 5000); // 5000 milliseconds delay
+var now = new Date();
+var min = now.getMinutes();
 
-var index = Math.round(Math.random() * 4);
-
-var ColorValue;
-if(index == 1)
-ColorValue = "ffe6ff"; //lightpink
-if(index == 2)
-ColorValue = "ffffcc"; //lightyellow
-if(index == 3)
-ColorValue = "ebfafa"; //babyblue
-if(index == 4)
-ColorValue = "e6ffcc"; //lightgreen
-
-document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
-
+//Nese minutat jane numer çift atehere background ka ngjyre light pink
+if (min%2==0){
+document.write ('<body style="background-color: #ffe6ff">');
+}
+//Nese minutat jane numer tek atehere background eshte light blue
+if (min%2==1){
+document.write ('<body style="background-color: #ebfafa">');
 }
 </script>
-<body onload="setbackground();">
     </head>
     <body>  
         <header>
@@ -78,7 +69,6 @@ document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValu
             <li>Learn how to get the most out of the technology they have.</li>
             <li>Ask opinions/reviews about the technology and the consumer electronics they live with every day.</li>
                 </ol></div><br><BR>
-
 
 </div>
  <img src="images/background.jpg" width="100%" height="100%"><br><br><br>
