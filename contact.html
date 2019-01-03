@@ -161,9 +161,10 @@ function validateForm() {
 </div>
 <span style="position: absolute;  left: 720px; ">
  <button type="button"
-onclick="document.getElementById('date_time_button').innerHTML = Date()">
+onclick="document.getElementById('date_time_button').innerHTML = Date(), localClickCounter()">
 Click and see Date and Time.</button>
 <p id="date_time_button"></p>
+<p id="localResult"></p>
 </span>
 <span style="position: absolute; left: 480px; ">
   <button onclick="myLocation()">Click here to get Location</button>
@@ -211,6 +212,19 @@ function clickCounter() {
     document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+
+function localClickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("localResult").innerHTML = "You have clicked the clockbutton " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("localResult").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
 </script>
