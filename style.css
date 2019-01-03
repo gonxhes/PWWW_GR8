@@ -413,8 +413,14 @@ height:100%;
 	font-weight: 300;
 	color: #666;
 	font-weight:bold;
+}
 
-
+#result{
+	color: #34495E;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	padding-top:2px;
+	padding-bottom: 2px;
 }
 /*.footerdiv{
      	background-color: #d7d3ad;

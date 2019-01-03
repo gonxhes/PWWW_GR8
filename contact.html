@@ -140,8 +140,9 @@ function validateForm() {
            <label>Call</label><br><br>
            <label>Message: </label>
            <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
-           <input type="submit" value="Send Message">
+           <input type="submit" onclick="clickCounter()" value="Send Message">
        </form>
+<div id="result"></div>
      </div></div>
        <hr id="hrcontact"><br>
  <div id="container2" align="center">
@@ -198,6 +199,18 @@ function showError(error) {
     case error.UNKNOWN_ERROR:
       x.innerHTML = "An unknown error occurred."
       break;
+  }
+}
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
 </script>
