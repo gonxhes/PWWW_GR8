@@ -18,6 +18,11 @@
           	background-position: right;
           	background-repeat: no-repeat;
           }
+          /*Aplikimi i njeres nga 3D transforms property*/
+          img:hover{
+          	  -webkit-transform: scaleX(-1);
+  			  transform: scaleX(-1);
+          }
         </style>
         <script>
 function allowDrop(ev) {
@@ -105,7 +110,7 @@ function drop(ev) {
           <div class style="text-align: center; font-size:15px;"><p>Co-founder</p>
 
           </div>
-          <div class ="about-foto"id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/2.jpg" draggable="true" ondragstart="drag(event)" id="drag1" title="drag me down"></div>
+          <div class ="about-foto" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/2.jpg" draggable="true" ondragstart="drag(event)" id="drag1" title="drag me down"></div>
         </div>
                           
 

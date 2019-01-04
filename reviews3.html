@@ -12,7 +12,15 @@
                 font-size: 17px;
                 border-collapse: collapse;
         	}
-            #table2{
+          th.rotate {
+             height: 80px;
+         }
+            /*Aplikimi i njeres nga 2D transforms property*/
+             .rotate div {
+             transform:  rotate(345deg);
+
+         }
+        #table2{
                 width: 100%;
                 font-size: 15px;
                 border-spacing: 5px;
@@ -27,6 +35,7 @@
         	body{
         		background-color: #e6ffee;
         	}
+            /*Perdorimi i nje prej Text Effects(text-justify) dhe i Web Fonts*/
         	#container1{
         		position: relative;
        			bottom: 100px;
@@ -34,7 +43,15 @@
         		padding: 10px 30px;
         		font-size: 22px;
         		text-align: justify;
+                text-justify: auto;
         	}
+            @font-face {
+                 font-family: myFont;
+                src: url(Jura-Regular.otf);
+            }         
+            *{
+                font-family: myFont;
+            }      
         	hr{
         		margin-top: 20px;
         		margin-bottom: 20px;
@@ -157,12 +174,11 @@
         </table>
 <br>
         <table>
-            <caption>iPhone XS, iPhone XS Max and iPhone XR</caption>
   <tr>
     <th></th>
-    <th>iPhone XS</th>
-    <th>iPhone XS Max</th> 
-    <th>iPhone XR</th>
+    <th class="rotate"><div><span>iPhone XS</span></div></th>
+    <th class="rotate"><div><span>iPhone XS Max</span></div></th> 
+    <th class="rotate"><div><span>iPhone XR</span></div></th>
   </tr>
   <tr>
     <th>Display</th>
