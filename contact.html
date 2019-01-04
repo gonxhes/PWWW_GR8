@@ -9,14 +9,14 @@
 function validateForm() {
   //Validimi i Emrit
   var x = document.forms["contactform"]["firstname"].value;
-  if (x == "" || (x.charAt(0) == " ")) {
-    alert("Name must be filled out");
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+    alert("Name must be filled out correctly");
     return false;
   }
   //Validimi i Mbiemrit
   var x = document.forms["contactform"]["lastname"].value;
-  if (x == "" || (x.charAt(0) == " ")) {
-    alert("Lastname must be filled out");
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+    alert("Lastname must be filled out correctly");
     return false;
   }
   //Validimi i Email
@@ -124,7 +124,7 @@ function validateForm() {
               <option value="reason4">I can't find a product</option>
               <option value="reason5">Other</option>
            </select>
-            <label>Age: </label>
+           <label>Age: </label>
            <input type="radio" name="age" value="under 18">
            <label>Under 18</label>
            <input type="radio" name="age" value="19 to 30">
