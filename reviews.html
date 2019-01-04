@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="style2.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style type="text/css">
+        /*Perdorimi i CSS3 Transitions*/
         	button{
         		border-radius: 10px;
         		padding: 10px 20px;
@@ -17,7 +18,43 @@
         		border: none;
         		margin-left: 220px;
         		margin-top: 20px;
-        	}
+            transition-duration: 1s;
+            transition-timing-function: linear;
+          }
+            button:hover {
+            border-radius: 50%;
+           }
+           /*Perdorimi i CSS3 Animations*/
+           h1 {
+           -webkit-animation-duration: 2s;
+           -webkit-animation-name: slidein;
+           animation-duration: 2s;
+           animation-name: slidein;
+          }
+           @-webkit-keyframes slidein {
+          from {
+          margin-left: 100%;
+           width: 100%; 
+           }
+
+           to {
+           margin-left: 0%;
+          width: 100%;
+          }
+        }
+
+          @keyframes slidein {
+          from {
+          margin-left: 100%;
+           width: 100%; 
+           }
+
+           to {
+           margin-left: 0%;
+          width: 100%;
+          }
+        }
+
         	span{
         		position: absolute;
         		top: 250px;
