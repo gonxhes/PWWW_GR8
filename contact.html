@@ -9,13 +9,15 @@
 function validateForm() {
   //Validimi i Emrit
   var x = document.forms["contactform"]["firstname"].value;
-  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+  var regex =/^[a-zA-Z ]{2,30}$/gi;
+  if (!x.match(regex)) {
     alert("Name must be filled out correctly");
+    console.log(regex.test(x));
     return false;
   }
   //Validimi i Mbiemrit
   var x = document.forms["contactform"]["lastname"].value;
-  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+  if (!x.match(/^[a-zA-Z ]{2,30}$/gi)) {
     alert("Lastname must be filled out correctly");
     return false;
   }
