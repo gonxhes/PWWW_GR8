@@ -27,3 +27,36 @@ body{
 		opacity: 0.9;
 	}
 }
+
+.line {
+	width: 70px;
+	height: 3px;
+	background-color: white;
+	display: inline-block;
+	position: absolute;
+	top: 150px;
+	right: 650px;	
+	margin-right: 20px;
+}
+
+.line2{
+	top: 170px;
+	width: 60px;
+	height: 3px;
+	background-color: white;
+	display: inline-block;
+	position: absolute;
+	right:600px;
+	margin-right: 20px;
+}
+
+.line3{
+	top:190px;
+	width: 70px;
+	height: 3px;
+	background-color:white;
+	display: inline-block;
+	position: absolute;
+	margin-right: 20px;
+	right: 650px;
+}
