@@ -210,7 +210,7 @@ input[type=text], input[type=email], select, textarea{
         
          }
 .about-wrapper{
-	background-image: linear-gradient(to right, rgb(255, 255, 204), rgb(255, 181, 102));
+	background-image: linear-gradient(to right, rgb(255, 255, 204), rgb(85,143,157));
 	margin: -20px;
 	padding: 20px;
 }
@@ -421,6 +421,49 @@ height:100%;
 	margin-top: 5px;
 	padding-top:2px;
 	padding-bottom: 2px;
+}
+.about-search{
+	margin-left: 30%;
+	margin-bottom: 50px;
+}
+.about-search p {
+	color: 	 #005580;
+}
+.about-search table{
+
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  border: 1px solid red;
+  color: #330033;
+
+}
+
+.about-search td,th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.about-search tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.about-search tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.about-search input[type="text"]{
+	
+	width: 50%;
+	 padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+
 }
 /*.footerdiv{
      	background-color: #d7d3ad;

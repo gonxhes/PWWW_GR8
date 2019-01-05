@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="searchfilter.js"></script>
         <style type="text/css">
           img, #div2{
             margin-left:20%; 
@@ -13,21 +15,15 @@
             border-radius:150px;
           }
           body{
-          	background-image: url(images/background5.png);
-          	background-attachment: fixed;
-          	background-position: right;
-          	background-repeat: no-repeat;
+            background-image: url(images/background5.png);
+            background-attachment: fixed;
+            background-position: right;
+            background-repeat: no-repeat;
           }
           /*Aplikimi i njeres nga 3D transforms property*/
-          .img1:hover{
-          	  -webkit-transform: scaleX(-1);
-  			  transform: scaleX(-1);
-          }
-          .img2:hover{
-          	transform: rotateX(50deg);
-          }
-          .img3:hover{
-          	transform: rotateY(50deg);
+          img:hover{
+              -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
           }
         </style>
         <script>
@@ -107,7 +103,7 @@ function drop(ev) {
         <div class="about-box" id="abt1">
           <div class ="ab-titulli"><h4>Orgest Blakcori</h4></div>
           <div class style="text-align: center; font-size:15px;"><p>Co-founder </p></div>
-                  <div class ="about-foto"><img src="images/1.jpg" class="img1"></div>
+                  <div class ="about-foto"><img src="images/1.jpg"></div>
 
           </div>
 
@@ -116,7 +112,7 @@ function drop(ev) {
           <div class style="text-align: center; font-size:15px;"><p>Co-founder</p>
 
           </div>
-          <div class ="about-foto" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/2.jpg" draggable="true" ondragstart="drag(event)" id="drag1" class="img1" title="drag me down"></div>
+          <div class ="about-foto" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="images/2.jpg" draggable="true" ondragstart="drag(event)" id="drag1" title="drag me down"></div>
         </div>
                           
 
@@ -124,21 +120,21 @@ function drop(ev) {
           <div class ="ab-titulli"><h4>Gonxhe Sylaj</h4></div>
           <div class style="text-align: center; font-size:15px;" ><p>Co-founder</p>
           </div>
-          <div class ="about-foto"><img src="images/3.png" class="img1"></div>
+          <div class ="about-foto"><img src="images/3.png"></div>
         </div>
                           
 
         <div class="about-box">
           <div class ="ab-titulli"><h4>Er&#235; Ibrahimi</h4></div>
           <div class style="text-align: center; font-size:15px;"><p>Head developer</p></div>
-          <div class ="about-foto"><img src="images/4.jpg" class="img1"></div>
+          <div class ="about-foto"><img src="images/4.jpg"></div>
         </div>    
 
 
         <div class="about-box" id="abt1">
         <div class ="ab-titulli"><h4>&#199;lirim Gashi</h4></div>
           <div class style="text-align: center; font-size:15px;"><p>Editor </p></div>
-          <div class ="about-foto"><img src="images/5.jpg" class="img2"></div>
+          <div class ="about-foto"><img src="images/5.jpg"></div>
 
           </div>
 
@@ -156,7 +152,7 @@ function drop(ev) {
           <div class style="text-align: center; font-size:15px;"><p>
           Senior Editor</p>
           </div>
-          <div class ="about-foto"><img src="images/7.jpg" class="img2"></div>
+          <div class ="about-foto"><img src="images/7.jpg"></div>
         </div>
                           
 
@@ -164,9 +160,61 @@ function drop(ev) {
           <div class ="ab-titulli"><h4>&#203;nd&#235;rra Elezi</h4></div>
           <div class style="text-align: center; font-size:15px;"><p>
           Writer</p></div>
-          <div class ="about-foto"><img src="images/8.jpg" class="img3"></div>
+          <div class ="about-foto"><img src="images/8.jpg"></div>
         </div>
 </div>  
+<div class="about-search">
+<p>Contact our staff!</p>  
+  <input id="myInput" type="text" placeholder="Search..">
+  <br><br>
+
+    <table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody id="myTable">
+  <tr>
+    <td>Orgest</td>
+    <td>Blak&#231;ori</td>
+    <td>orgest.blakqori@techly.com</td>
+  </tr>
+  <tr>
+    <td>Tringa</td>
+    <td>Tha&#231;i</td>
+    <td>tringa.thaqi@techly.com</td>
+  </tr>
+  <tr>
+    <td>Gonxhe</td>
+    <td>Sylaj</td>
+    <td>gonxhe.sylaj@techly.com</td>
+  </tr>
+  <tr>
+    <td>Era</td>
+    <td>Ibrahimi</td>
+    <td>era.ibrahimi@techly.com</td>
+  </tr>
+  <tr>
+    <td>&#199;lirim</td>
+    <td>Gashi</td>
+    <td>clirim.gashi@techly.com</td>
+  </tr>
+  <tr>
+    <td>Olt</td>
+    <td>Bajrami</td>
+    <td>olti.bajrami@techly.com</td>
+  </tr>
+  <tr>
+    <td>&#203;nd&#235;rra</td>
+    <td>Elezi</td>
+    <td>enderra.elezi@techly.com</td>
+  </tr>
+  </tbody>
+</table>
+</div>
     </body>
 
 </html>
