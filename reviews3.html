@@ -17,14 +17,26 @@
          }
             /*Aplikimi i njeres nga 2D transforms property*/
              .rotate div {
-             transform:  rotate(345deg);
+             transform:  rotate(345deg) scale(0.9);
 
          }
         #table2{
                 width: 100%;
                 font-size: 15px;
                 border-spacing: 5px;
+                margin: auto;
+                animation: skew 3s infinite;
+                transform: skew(4deg);
+                animation-direction: alternate;
             }
+            @keyframes skew {
+            0% {
+            transform: skewX(4deg);
+             }
+            100% {
+            transform: skewX(-4deg);
+         }
+            x}
             /*Perdorimi i border-spacing per cellspacing
             dhe i padding per cellpadding*/
             #table2 th{

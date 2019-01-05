@@ -30,6 +30,28 @@ input[type=text] {
 input[type=text]:focus {
   width: 100%;
 }
+/*Metoda translate e 2D Transformimeve*/
+.banner{
+    transform: translate(10px, 10px);
+}
+h1{
+    transform: translate3d(1px, 2px, 3px);
+}
+/*Ndryshimi i background position me metoden translate te 3D Animacioneve*/
+body{
+    animation: fade-slide-down 0.6s ease-out forwards;
+}
+@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 
         </style>
 <script type="text/javascript">
