@@ -9,15 +9,13 @@
 function validateForm() {
   //Validimi i Emrit
   var x = document.forms["contactform"]["firstname"].value;
-  var regex =/^[a-zA-Z ]{2,30}$/gi;
-  if (!x.match(regex)) {
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
     alert("Name must be filled out correctly");
-    console.log(regex.test(x));
     return false;
   }
   //Validimi i Mbiemrit
   var x = document.forms["contactform"]["lastname"].value;
-  if (!x.match(/^[a-zA-Z ]{2,30}$/gi)) {
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
     alert("Lastname must be filled out correctly");
     return false;
   }
@@ -143,9 +141,22 @@ function validateForm() {
            <label>Message: </label>
            <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
            <input type="submit" onclick="clickCounter()" value="Send Message">
-       </form>
-<div id="result"></div>
-     </div></div>
+       </form><br><hr><br>
+<div class="loginbox" align="center">
+        <h2 style="text-align: center;">Login Here</h2><br>
+        <form style="width: 350px">
+            <p style="text-align: left;">Username:</p>
+            <input type="text" name="" placeholder="Enter Username..">
+            <p style="text-align: left;">Password</p>
+            <input type="password" name="" placeholder="Enter Password.."><br>
+            <input type="submit" name="" value="Login"><br><br>
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+        <div id="result"></div>
+    </div>
+     </div>
+   </div>
        <hr id="hrcontact"><br>
  <div id="container2" align="center">
    <div id="leftdiv">
