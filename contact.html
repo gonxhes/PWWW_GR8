@@ -126,12 +126,12 @@ function validateForm() {
        <form class="contactform" action="thankyou.html" name="contactform" onsubmit="return validateForm()">
         
            <label>Name:</label>
-           <input type="text" name="firstname" placeholder="Your name.." autofocus minlength="3">
+           <input type="text" name="firstname" placeholder="Your name..">
            <label>Last Name: </label>
-           <input type="text" name="lastname" placeholder="Your last name.." maxlength="20">
+           <input type="text" name="lastname" placeholder="Your last name..">
           
            <label>Email: </label>
-           <input type="email" name="email" placeholder="Email.." multiple autocomplete="off">
+           <input type="email" name="email" placeholder="Email.." multiple>
            <label>Subject: </label>
            <select id="subject" name="reason" >
             <option value="hidden" selected disabled hidden>Choose here..</option>
@@ -149,7 +149,7 @@ function validateForm() {
            <input type="radio" name="age" value="31 to 50">
            <label>31 to 50</label> <br><Br>
           <label>How would you like us to respond: </label>
-           <input type="checkbox" name="answer" required>
+           <input type="checkbox" name="answer">
            <label>Email</label>
            <input type="checkbox" name="answer">
            <label>Text Message</label>
@@ -157,7 +157,7 @@ function validateForm() {
            <label>Call</label><br><br>
            <label>Message: </label>
            <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
-           <input type="submit" onclick="clickCounter()" value="Send Message" formtarget="_blank">
+           <input type="submit" onclick="clickCounter()" value="Send Message">
        </form><br><hr><br>
 <div class="loginbox" align="center">
         <h2 style="text-align: center;">Login Here</h2><br>
@@ -165,8 +165,8 @@ function validateForm() {
             <p style="text-align: left;">Username:</p>
             <input type="text" name="" placeholder="Enter Username..">
             <p style="text-align: left;">Password</p>
-            <input type="password" name="" placeholder="Enter Password.."><br>
-            <input type="submit" name="" value="Login" formmethod="post"><br><br>
+              <input type="password" name="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password.." required><br>
+            <input type="submit" name="" value="Login"><br><br>
             <a href="#">Lost your password?</a><br>
             <a href="#">Don't have an account?</a>
         </form>
