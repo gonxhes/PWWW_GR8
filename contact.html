@@ -85,10 +85,20 @@ function validateForm() {
     function validateLogin(){
            //Validimi i Passwordit
     var x = document.forms["loginform"]["pass"].value;
+    var r =document.forms["loginform"]["repass"].value;
         if(!x.match(/^[a-zA-Z0-9]{8,}$/)){
           alert("Password must be contain at least one number and one uppercase and lowercase letter, and at least 8 or more cahracters");
           return false;
         }
+        if(!r.match(/^[a-zA-Z0-9]{8,}$/)){
+          alert("Password must be contain at least one number and one uppercase and lowercase letter, and at least 8 or more cahracters");
+          return false;
+        }
+
+        if (!(x == r)) {
+        alert("Passwords are not the same, please try again");
+          return false;
+    }
     }
 
 </script> 
@@ -176,7 +186,9 @@ function validateForm() {
             <p style="text-align: left;">Username:</p>
             <input type="text" name="" placeholder="Enter Username..">
             <p style="text-align: left;">Password</p>
-              <input type="password"  name="pass" placeholder="Enter Password.."><br>
+            <input type="password" name="pass" placeholder="Enter Password.."><br>
+            <p style="text-align: left;">Retype Password</p>
+            <input type="password" name="repass" placeholder="Retype Password.."><br>
             <input type="submit" name="" value="Login" formmethod="post"><br><br>
             <a href="#">Lost your password?</a><br>
             <a href="#">Don't have an account?</a>
