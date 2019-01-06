@@ -5,16 +5,83 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!--      <script>
+           <style type="text/css">
+          body{
+            background-image: url(images/tree.png), url(images/background9.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 200px 200px, 100% 100%;
+            background-position: 570px 300px, 0px 0px;
+          } 
+          /*Text Shadow: horizontal shadow, vertical shadow dhe blur radius*/
+          button{  
+            font-weight: bolder;
+            border-radius: 10px;
+              }
+          button:hover{
+            text-shadow: 2px 2px 5px #000000;  
+          }
+        </style>
+        <script>
 function validateForm() {
-  var x = document.forms["contactforma"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
+  //Validimi i Emrit
+  var x = document.forms["contactform"]["firstname"].value;
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+    alert("Name must be filled out correctly");
     return false;
   }
-}
-</script> -->
-    </head>
+  //Validimi i Mbiemrit
+  var x = document.forms["contactform"]["lastname"].value;
+  if (!x.match(/^[a-zA-Z ]{2,30}$/)) {
+    alert("Lastname must be filled out correctly");
+    return false;
+  }
+  //Validimi i Email
+    var x = document.forms["contactform"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    alert("Not a valid e-mail address");
+    return false;
+  }
+  //Validimi i select - opsioneve
+       if (document.getElementById("subject").selectedIndex == 0) {
+       alert("A subject must be choosen");
+       return false;
+     }
+  //Validimi i Moshes - radio button
+    var age = document.getElementsByName('age');
+        var ageValue = false;
+        for(var i=0; i<age.length;i++){
+            if(age[i].checked == true){
+                ageValue = true;    
+            }
+        }
+        if(!ageValue){
+            alert("Age must be choosen");
+            return false;
+        }
+    //Validimi i pergjigjjes - checkbox
+        var answer = document.getElementsByName('answer');
+        var ansValue = false;
+        for(var i=0; i<answer.length;i++){
+            if(answer[i].checked == true){
+                ansValue = true;    
+            }
+        }
+        if(!ansValue){
+            alert("An answer must be choosen");
+            return false;
+        }
+    //Validimi i mesazhit - textarea
+       if (document.getElementById("message").value == "" ) {
+       alert("Message must be filled out");
+       return false;
+        }
+      }
+
+</script> 
+    </head> 
     <body>  <header>
             <div class="nav1">
           <a href="index.html">Home</a> |
@@ -56,17 +123,17 @@ function validateForm() {
        <h1 id="title1">Contact</h1><br><hr id="hrcontact"> 
 <div id="container1" align="center">
     <div class="contact-wrapper">
-       <form class="contactform" action="get" name="contactform">
+       <form class="contactform" action="thankyou.html" name="contactform" onsubmit="return validateForm()">
         
            <label>Name:</label>
-           <input type="text" name="firstname" placeholder="Your name.." required>
+           <input type="text" name="firstname" placeholder="Your name.." autofocus minlength="3">
            <label>Last Name: </label>
-           <input type="text" name="lastname" placeholder="Your last name..">
+           <input type="text" name="lastname" placeholder="Your last name.." maxlength="20">
           
            <label>Email: </label>
-           <input type="email" name="emailaddress" placeholder="Email.." multiple>
+           <input type="email" name="email" placeholder="Email.." multiple autocomplete="off">
            <label>Subject: </label>
-           <select id="subject" name="reason" required>
+           <select id="subject" name="reason" >
             <option value="hidden" selected disabled hidden>Choose here..</option>
               <option value="reason1">I have problems with my phone</option>
               <option value="reason2">I don't know how to use my TV</option>
@@ -74,7 +141,7 @@ function validateForm() {
               <option value="reason4">I can't find a product</option>
               <option value="reason5">Other</option>
            </select>
-            <label>Age: </label>
+           <label>Age: </label>
            <input type="radio" name="age" value="under 18">
            <label>Under 18</label>
            <input type="radio" name="age" value="19 to 30">
@@ -82,20 +149,32 @@ function validateForm() {
            <input type="radio" name="age" value="31 to 50">
            <label>31 to 50</label> <br><Br>
           <label>How would you like us to respond: </label>
-           <input type="checkbox" name="answer">
+           <input type="checkbox" name="answer" required>
            <label>Email</label>
            <input type="checkbox" name="answer">
            <label>Text Message</label>
            <input type="checkbox" name="answer">
            <label>Call</label><br><br>
            <label>Message: </label>
-           <textarea id="message" placeholder="Write something.. " style="height: 120px;" required></textarea>
-           <input type="submit" value="Send Message">
-       </form>
-     </div></div>
+           <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
+           <input type="submit" onclick="clickCounter()" value="Send Message" formtarget="_blank">
+       </form><br><hr><br>
+<div class="loginbox" align="center">
+        <h2 style="text-align: center;">Login Here</h2><br>
+        <form style="width: 350px">
+            <p style="text-align: left;">Username:</p>
+            <input type="text" name="" placeholder="Enter Username..">
+            <p style="text-align: left;">Password</p>
+              <input type="password" name="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password.." required><br>
+            <input type="submit" name="" value="Login" formmethod="post"><br><br>
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+        <div id="result"></div>
+    </div>
+     </div>
+   </div>
        <hr id="hrcontact"><br>
-
-      
  <div id="container2" align="center">
    <div id="leftdiv">
       <h2>Opening Hours</h2><br>
@@ -108,8 +187,82 @@ function validateForm() {
       <address>
       <p>7 Shtatori nr.38 <br> 60000 Gjilan, Kosovo.<br><br><b><a href="mailto:tringasg4@gmail.com">info@techly.com</a></b><br>Tel: +377 45 518 640<br>Fax: 038 518 640<br>Web: <b>www.techly.com</b> </p>
     </address>
-    </div>
+    </div><br><br><br><br><br><br><br><br><br><br>
 </div>
+<span style="position: absolute;  left: 720px; ">
+ <button type="button"
+onclick="document.getElementById('date_time_button').innerHTML = Date(), localClickCounter()">
+Click and see Date and Time.</button>
+<p id="date_time_button"></p>
+<p id="localResult"></p>
+</span>
+<span style="position: absolute; left: 480px; ">
+  <button onclick="myLocation()">Click here to get Location</button>
+  <p id="demo"></p>
+</span>
+<script type="text/javascript">
+var x = document.getElementById("demo");
 
+function myLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+
+function localClickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("localResult").innerHTML = "You have clicked the clockbutton " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("localResult").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+<footer>
+                <div class="footerdiv" style="position: absolute; margin-top: 60px; "> 
+                  <p>Copyright &copy; 2019 Tech-Ly - All Rights Reserved</p>
+                  <p style="float: right;">Made by TOG</p>
+                </div>
+            </footer>
     </body>
 </html> 
