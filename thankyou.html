@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>Redirect</title>
     <link rel="stylesheet" href="emailstyle.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jQueryEffects.js"></script>
 <script>
 $(document).ready(function(){
     var line = $(".line");
@@ -24,6 +26,42 @@ $(document).ready(function(){
    
   </head>
   <body>
+    <div class="nav1">
+          <a href="index.html">Home</a> |
+        <a href="news.html">News</a> |
+        <a href="reviews.html">Reviews</a> |
+        <a href="#">Pricing</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html">About</a>
+        <p class="info">Tel: +383 45 518 640 | Mail: info@techly.com</p><hr>
+        </div>
+      <div class="nav2">
+      <table> <tr>
+                    
+                <td><h1>Tech-Ly</h1>
+                <p id="description">Your best choice for technology</p></td>
+                        
+                    
+                    <td class="table"> <h3><a href="index.html">Home</a></h3>
+                    <p>Welcome to the best place for technology news and much more.</p></td>
+                    
+
+                <td class="table"> <h3><a id="product" href="news.html">News</a></h3>
+                    <p>Newest information about technology including videos and audios.</p></td>
+                    
+
+                <td class="table"> <h3><a href="reviews.html">Reviews</a></h3>
+                    <p>Thinking of bying a product? Take a look at our reviews for a better purchase. </p></td>
+
+
+                <td class="table"> <h3><a href="about.html">About</a></h3>
+                    <p>Who we are, what we do and what we plan on doing in the future.</p></td>
+                    </tr>
+                  </table>
+                 
+
+        </div>
+
 
     <div id="sentence">
  
@@ -45,7 +83,10 @@ $(document).ready(function(){
   <div class="line"></div>
   <div class="line2"></div>
   <div class="line3"></div>
-
+ <form>
+   <input type="text" id="input" name="input" placeholder="Type show or hide, to hide or show the navigation bar" style="width:500px; margin-left: 400px;" >
+   <input type="submit" id="submit" name="submit">
+ </form>
   
 <script type="text/javascript">
   var i=0,sentence;
