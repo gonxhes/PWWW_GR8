@@ -12,6 +12,14 @@
             background-repeat: no-repeat;
             background-size: 200px 200px, 100% 100%;
             background-position: 570px 300px, 0px 0px;
+          } 
+          /*Text Shadow: horizontal shadow, vertical shadow dhe blur radius*/
+          button{  
+            font-weight: bolder;
+            border-radius: 10px;
+              }
+          button:hover{
+            text-shadow: 2px 2px 5px #000000;  
           }
         </style>
         <script>
@@ -118,7 +126,7 @@ function validateForm() {
        <form class="contactform" action="thankyou.html" name="contactform" onsubmit="return validateForm()">
         
            <label>Name:</label>
-           <input type="text" name="firstname" placeholder="Your name.." >
+           <input type="text" name="firstname" placeholder="Your name..">
            <label>Last Name: </label>
            <input type="text" name="lastname" placeholder="Your last name..">
           
