@@ -36,6 +36,8 @@ function validateForm() {
     alert("Lastname must be filled out correctly");
     return false;
   }
+
+
   //Validimi i Email
     var x = document.forms["contactform"]["email"].value;
     var atpos = x.indexOf("@");
@@ -78,7 +80,16 @@ function validateForm() {
        alert("Message must be filled out");
        return false;
         }
-      }
+          }
+
+    function validateLogin(){
+           //Validimi i Passwordit
+    var x = document.forms["loginform"]["pass"].value;
+        if(!x.match(/^[a-zA-Z0-9]{8,}$/)){
+          alert("Password must be contain at least one number and one uppercase and lowercase letter, and at least 8 or more cahracters");
+          return false;
+        }
+    }
 
 </script> 
     </head> 
@@ -161,11 +172,11 @@ function validateForm() {
        </form><br><hr><br>
 <div class="loginbox" align="center">
         <h2 style="text-align: center;">Login Here</h2><br>
-        <form style="width: 350px">
+        <form class="loginform" name="loginform" style="width: 350px" onsubmit="return validateLogin()">
             <p style="text-align: left;">Username:</p>
             <input type="text" name="" placeholder="Enter Username..">
             <p style="text-align: left;">Password</p>
-              <input type="password" name="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password.." required><br>
+              <input type="password"  name="pass" placeholder="Enter Password.."><br>
             <input type="submit" name="" value="Login" formmethod="post"><br><br>
             <a href="#">Lost your password?</a><br>
             <a href="#">Don't have an account?</a>
