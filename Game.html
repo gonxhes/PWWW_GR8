@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <style>
+
 body{background-color: #FFDFD9;}
 canvas {
     border:1px solid #d3d3d3;
@@ -20,7 +21,9 @@ input[type="text"]{
     border-radius:20px;
     width: 100px;
 }
-div {
+div { -moz-box-sizing:border-box;
+     -webkit-box-sizing:border-box; 
+        box-sizing:border-box; 
      outline: 3px solid #7D4E45;
   outline-offset: 2px;
   text-align:center;
