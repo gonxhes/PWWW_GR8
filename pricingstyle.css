@@ -1,0 +1,45 @@
+body , html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.background-image{
+	background-image: url("images/pricing-background.jpg");
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	color: #fff;
+	font-family: helvetica;
+
+
+}
+
+.middle {
+	position: absolute;
+	top: 40%;
+	bottom: 60%;
+	transform: translate(80% , 50%);
+	text-align: center;
+}
+
+h1{
+	font-size: 40px;
+	letter-spacing: 20px;
+	font-weight: 100;
+}
+
+#countdown{
+	font-weight: lighter;
+	word-spacing: 20px;
+	color: rgba();
+
+}
+
+hr{
+	margin: auto;
+	width: 80%;
+	border: 1.5 solid #fff;
+
+}
