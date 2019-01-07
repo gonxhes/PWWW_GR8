@@ -7,19 +7,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="jQueryEffects.js"></script>
+    <script type="text/javascript">
+  
+  var $ = jQuery.noConflict();
+</script>
+    
 <script>
 $(document).ready(function(){
     var line = $(".line");
     var line2 = $(".line2");
     var line3 = $(".line3");
     
-    line.animate({right: '600px'},"slow");
-    line2.animate({right: '610px'},"slow");
-    line3.animate({right: '600px'},"slow");
+    line.animate({right: '670px'},"slow");
+    line2.animate({right: '660px'},"slow");
+    line3.animate({right: '670px'},"slow");
 
-    line.animate({right: '655px'},"slow");
-    line2.animate({right: '650px'},"slow");
-    line3.animate({right: '655px'},"slow");
+    line.animate({right: '630px'},"slow");
+    line2.animate({right: '625px'},"slow");
+    line3.animate({right: '630px'},"slow");
   });
   
 </script>
@@ -35,7 +40,7 @@ $(document).ready(function(){
         <a href="about.html">About</a>
         <p class="info">Tel: +383 45 518 640 | Mail: info@techly.com</p><hr>
         </div>
-      <div class="nav2">
+      <div class="nav2" >
       <table> <tr>
                     
                 <td><h1>Tech-Ly</h1>
@@ -66,27 +71,22 @@ $(document).ready(function(){
     <div id="sentence">
  
     </div>
+
    
-   <svg width="1100" height="180">
+   <svg  width="1100" height="180">
     <rect x="500" y="40" width="100" height="60"
-    style="fill:white;stroke:pink;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
-    <line x1="500" y1="40" x2="550" y2="90" style="stroke:pink;stroke-width:2" />
-    <line x1="550" y1="90" x2="600" y2="40" style="stroke:pink;stroke-width:2" />
+    style="fill:white;stroke:black;stroke-width:5;fill-opacity:0.1;stroke-opacity:0.9" />
+    <line x1="500" y1="40" x2="550" y2="90" style="stroke:black;stroke-width:2" />
+    <line x1="550" y1="90" x2="600" y2="40" style="stroke:black;stroke-width:2" />
      <polygon points="770,110 790,100 810,100 830,110" style="fill:black;stroke:black;stroke-width:3; opacity:0.5" />
      <rect x="750" y="20" rx="20" ry="20" width="100" height="80" style="fill:#2867ec;stroke:black;stroke-width:5;opacity:0.5" />
   Sorry, your browser does not support inline SVG.
-
-  <!--  <line x1="700" y1="50" x2="730" y2="50" style="stroke:white;stroke-width:2" />
-    <line x1="675" y1="70" x2="850" y2="70" style="stroke:white;stroke-width:2" />-->
   </svg>
 
   <div class="line"></div>
   <div class="line2"></div>
   <div class="line3"></div>
- <form>
-   <input type="text" id="input" name="input" placeholder="Type show or hide, to hide or show the navigation bar" style="width:500px; margin-left: 400px;" >
-   <input type="submit" id="submit" name="submit">
- </form>
+
   
 <script type="text/javascript">
   var i=0,sentence;
@@ -99,13 +99,9 @@ $(document).ready(function(){
         i++;
         setTimeout(typing,70);
        }
-       
-    
-
   }
   typing();
 </script>
-
 
   </body>
 </html>

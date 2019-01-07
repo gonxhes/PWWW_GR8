@@ -12,7 +12,7 @@ body{
 	display: inline-block;
 	float: left;
 	margin-top:50px ;
-	color:white;
+	color:#8fb5bd;
 	animation: blink 4s infinite linear;
 }
 
@@ -34,13 +34,13 @@ body{
 	background-color: white;
 	display: inline-block;
 	position: absolute;
-	top: 150px;
+	top: 250px;
 	right: 650px;	
 	margin-right: 20px;
 }
 
 .line2{
-	top: 170px;
+	top: 270px;
 	width: 60px;
 	height: 3px;
 	background-color: white;
@@ -51,7 +51,7 @@ body{
 }
 
 .line3{
-	top:190px;
+	top:290px;
 	width: 70px;
 	height: 3px;
 	background-color:white;
@@ -60,3 +60,4 @@ body{
 	margin-right: 20px;
 	right: 650px;
 }
+
