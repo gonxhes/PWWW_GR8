@@ -1,0 +1,63 @@
+
+
+body{
+	background-image: url("../images/background9.jpg");
+}
+
+#sentence{
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	font-size: 50px;	
+	display: inline-block;
+	float: left;
+	margin-top:50px ;
+	color:#3873BA;
+	animation: blink 4s infinite linear;
+}
+
+@keyframes blink{
+	0%{
+		opacity: 0.9;
+	}
+	99%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 0.9;
+	}
+}
+
+.line {
+	width: 70px;
+	height: 3px;
+	background-color:rgba(56,115,186,0.5);
+	display: inline-block;
+	position: absolute;
+	top: 250px;
+	right: 650px;	
+	margin-right: 20px;
+}
+
+.line2{
+	top: 270px;
+	width: 60px;
+	height: 3px;
+	background-color: rgba(56,115,186,0.5);
+	display: inline-block;
+	position: absolute;
+	right:600px;
+	margin-right: 20px;
+}
+
+.line3{
+	top:290px;
+	width: 70px;
+	height: 3px;
+	background-color:rgba(56,115,186,0.5);
+	display: inline-block;
+	position: absolute;
+	margin-right: 20px;
+	right: 650px;
+}
+

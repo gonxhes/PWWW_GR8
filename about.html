@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html manifest="manifest.appcache">
     <head>
-        <title>Template</title>
+        <title>About Us</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="searchfilter.js"></script>
+        <script src="jQuery/jQuery-3.3.1.js"></script>
+        <script src="jQuery/searchfilter.js"></script>
+        <script src="js/dragAndDrop.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style type="text/css">
           img, #div2{
@@ -34,28 +36,22 @@
           	transform: rotateY(50deg);
           }
         </style>
-        <script>
-function allowDrop(ev) {
-  ev.preventDefault();
+        <script type="text/javascript">
+          function replaceFunction() {
+ var str = document.getElementById("emri").innerHTML;
+ var res = str.replace("TL", "Tech-Ly");
+ document.getElementById("emri").innerHTML = res;
 }
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-</script>
+        </script>
+       
     </head>
     <body>  <header>
               <div class="nav1">
           <a href="index.html">Home</a> |
         <a href="news.html">News</a> |
         <a href="reviews.html">Reviews</a> |
-        <a href="#">Pricing</a> |
+        <a href="pricing.html">Pricing</a> |
         <a href="contact.html">Contact</a> |
         <a href="about.html">About</a>
         <p class="info">Tel: +383 45 518 640 | Mail: info@techly.com</p><hr>
@@ -95,7 +91,8 @@ function drop(ev) {
        <div id="container1">
         <div class="about-wrapper">
        <p>Tech-Ly tracks all the latest consumer technology breakthroughs and shows you what's new, what matters and how technology can enrich your life. We give you the information, tools and advice that will help you decide what to buy and how to get the most out of the tech in your life.</p><br>
-       <p>Each month, millions of people come to Tech-ly to:</p>
+       
+<p onmouseover="replaceFunction()" id="emri">Each month, millions of people come to TL to:</p>
        <ul class="lista">
            <li>Read the latest technology news and unbiased product reviews</li>
            <li>Find the products that are right for them</li>

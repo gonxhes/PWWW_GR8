@@ -3,11 +3,13 @@ index.html
 about.html
 contact.html
 Game.html
-gamescript.js
-gamestyle.css
-inputerror.js
-jQueryEffects.js
-jQueryHTML.js
+js/gamescript.js
+js/commingsoon_countdown
+jQuery/jQuery-3.3.1.js
+css/gamestyle.css
+js/inputerror.js
+jQuery/jQueryEffects.js
+jQuery/jQueryHTML.js
 Jura-Regular.otf
 news.html
 news2.html
@@ -15,9 +17,9 @@ reviews.html
 reviews2.html
 reviews3.html
 pricing.html
-searchfilter.js
-style.css
-style2.css
+jQuery/searchfilter.js
+css/style.css
+css/style2.css
 images/1.jpg
 images/2.jpg
 images/3.jpg
@@ -72,6 +74,6 @@ videos/vid3.mp4
 
 NETWORK:
 thankyou.html
-emailstyle.css
+css/emailstyle.css
 
 FALLBACK:
