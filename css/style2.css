@@ -1,5 +1,9 @@
 body{   margin: 0px;
         background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
         background-size: cover;
 }
 .banner{		
@@ -7,6 +11,10 @@ body{   margin: 0px;
         padding: 20px;
         text-align: justify;
         background-color: white;
+        -webkit-opacity: 0.6;
+        -moz-opacity: 0.6;
+        -o-opacity: 0.6;
+        -ms-opacity: 0.6;
         opacity: 0.6;
         font-weight: bolder;
         margin: auto;

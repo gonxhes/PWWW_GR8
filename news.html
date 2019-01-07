@@ -10,6 +10,10 @@
     
 input[type=text] {
   width: 100px;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box; 
+  -o-box-sizing:border-box; 
+  -ms-box-sizing:border-box;
   box-sizing: border-box;
   border: 2px solid #ccc;
   font-size: 16px;
@@ -19,6 +23,9 @@ input[type=text] {
   background-repeat: no-repeat;
   padding: 12px 20px 12px 25px;
   -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  -ms-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
 }
 .search{
@@ -32,17 +39,62 @@ input[type=text]:focus {
 }
 /*Metoda translate e 2D Transformimeve*/
 .banner{
+
+    -webkit-transform: translate(10px, 10px);
+    -moz-transform: translate(10px, 10px);
+    -o-transform: translate(10px, 10px);
+    -ms-transform: translate(10px, 10px);
     transform: translate(10px, 10px);
 }
 h1{
+    -webkit-transform: translate3d(1px, 2px, 3px);
+    -moz-transform: translate3d(1px, 2px, 3px);
+    -o-transform: translate3d(1px, 2px, 3px);
+    -ms-transform: translate3d(1px, 2px, 3px);
     transform: translate3d(1px, 2px, 3px);
 }
 /*Ndryshimi i background position me metoden translate te 3D Animacioneve*/
 body{
     animation: fade-slide-down 0.6s ease-out forwards;
 }
+@-webkit-keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-moz-keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@-o-keyframes@keyframes fade-slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+}
 @keyframes fade-slide-down {
   0% {
+    -webkit-opacity:0;
+    -moz-opacity:0;
+    -o-opacity:0;
+    -ms-opacity:0;
     opacity: 0;
     transform: translateY(-20px);
   }

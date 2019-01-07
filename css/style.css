@@ -177,6 +177,10 @@ input[type=text], input[type=email], input[type=password], select, textarea{
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    -o-box-sizing:border-box; 
+    -ms-box-sizing:border-box; 
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -460,6 +464,10 @@ height:100%;
 	 padding: 5px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    -o-box-sizing:border-box; 
+    -ms-box-sizing:border-box;
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
@@ -468,10 +476,14 @@ height:100%;
 }
 
 .gazete {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
+  -webkit-column-count: 3; 
+  -moz-column-count: 3; 
+  -o-column-count: 3;
+  -ms-column-count: 3;
   column-count: 3;
-  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 40px; /* Firefox */
+  -webkit-column-gap: 40px; 
+  -moz-column-gap: 40px; 
+  -o-column-gap: 40px;
+  -ms-column-gap: 40px;
   column-gap: 40px;
 }

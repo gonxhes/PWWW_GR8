@@ -17,6 +17,10 @@
          }
             /*Aplikimi i njeres nga 2D transforms property*/
              .rotate div {
+             -webkit-transform:  rotate(345deg) scale(0.9);
+             -moz-transform:  rotate(345deg) scale(0.9);
+             -o-transform:  rotate(345deg) scale(0.9);
+             -ms-transform:  rotate(345deg) scale(0.9);
              transform:  rotate(345deg) scale(0.9);
 
          }
@@ -25,18 +29,64 @@
                 font-size: 15px;
                 border-spacing: 5px;
                 margin: auto;
+                -webkit-animation: skew 3s infinite;
+                -moz-animation: skew 3s infinite;
+                -o-animation: skew 3s infinite;
+                -ms-animation: skew 3s infinite;
                 animation: skew 3s infinite;
+                -webkit-transform: skew(4deg);
+                -moz-transform: skew(4deg);
+                -o-transform: skew(4deg);
+                -ms-transform: skew(4deg);
                 transform: skew(4deg);
+                -webkit-animation-direction: alternate;
+                -moz-animation-direction: alternate;
+                -o-animation-direction: alternate;
+                -ms-animation-direction: alternate;
                 animation-direction: alternate;
             }
-            @keyframes skew {
+            @-webkit-keyframes skew {
             0% {
+            -webkit-transform: skewX(4deg);
+            ;
             transform: skewX(4deg);
              }
             100% {
-            transform: skewX(-4deg);
+                -webkit-transform: skewX(-4deg);
+                
+                transform: skewX(-4deg);
          }
-            x}
+            }
+            @-moz-keyframes skew {
+            0% {
+                -moz-transform: skewX(4deg);
+                transform: skewX(4deg);
+             }
+            100% {
+                -moz-transform: skewX(-4deg);
+                transform: skewX(-4deg);
+         }
+            }
+            @-o-keyframes skew {
+            0% {
+                -o-transform: skewX(4deg);
+                transform: skewX(4deg);
+             }
+            100% {
+                -o-transform: skewX(-4deg);
+                transform: skewX(-4deg);
+         }
+            }
+            @keyframes skew {
+            0% {
+                
+                transform: skewX(4deg);
+             }
+            100% {
+            
+                                transform: skewX(-4deg);
+         }
+            }
             /*Perdorimi i border-spacing per cellspacing
             dhe i padding per cellpadding*/
             #table2 th{

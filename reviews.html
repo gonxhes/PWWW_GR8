@@ -18,7 +18,15 @@
         		border: none;
         		margin-left: 220px;
         		margin-top: 20px;
+            -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            -ms-transition-duration: 1s;
             transition-duration: 1s;
+            -webkit-transition-timing-function: linear;
+            -moz-transition-timing-function: linear;
+            -o-transition-timing-function: linear;
+            -ms-transition-timing-function: linear;
             transition-timing-function: linear;
           }
             button:hover {
@@ -27,11 +35,28 @@
            /*Perdorimi i CSS3 Animations*/
            h1 {
            -webkit-animation-duration: 2s;
-           -webkit-animation-name: slidein;
+           -moz-animation-duration: 2s;
+           -o-animation-duration: 2s;
+           -ms-animation-duration: 2s;
            animation-duration: 2s;
+           -webkit-animation-name: slidein;
+           -moz-animation-name: slidein;
+           -o-animation-name: slidein;
+           -ms-animation-name: slidein;
            animation-name: slidein;
           }
            @-webkit-keyframes slidein {
+            from {
+            margin-left: 100%;
+             width: 100%; 
+             }
+
+             to {
+             margin-left: 0%;
+            width: 100%;
+          }
+        }
+        @-moz-keyframes slidein {
           from {
           margin-left: 100%;
            width: 100%; 
@@ -43,7 +68,19 @@
           }
         }
 
-          @keyframes slidein {
+        @-o-keyframes slidein {
+          from {
+          margin-left: 100%;
+           width: 100%; 
+           }
+
+           to {
+           margin-left: 0%;
+          width: 100%;
+          }
+        }
+
+        @keyframes slidein {
           from {
           margin-left: 100%;
            width: 100%; 

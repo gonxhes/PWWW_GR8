@@ -8,6 +8,11 @@ body , html{
 	background-image: url("../images/pricing-background.jpg");
 	height: 100%;
 	background-position: center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
 	background-size: cover;
 	position: relative;
 	color: #fff;
