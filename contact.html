@@ -36,8 +36,6 @@ function validateForm() {
     alert("Lastname must be filled out correctly");
     return false;
   }
-
-
   //Validimi i Email
     var x = document.forms["contactform"]["email"].value;
     var atpos = x.indexOf("@");
@@ -81,7 +79,6 @@ function validateForm() {
        return false;
         }
           }
-
     function validateLogin(){
            //Validimi i Passwordit
     var x = document.forms["loginform"]["pass"].value;
@@ -94,13 +91,11 @@ function validateForm() {
           alert("Password must be contain at least one number and one uppercase and lowercase letter, and at least 8 or more cahracters");
           return false;
         }
-
         if (!(x == r)) {
         alert("Passwords are not the same, please try again");
           return false;
     }
     }
-
 </script> 
     </head> 
     <body>  <header>
@@ -176,6 +171,25 @@ function validateForm() {
            <label>Text Message</label>
            <input type="checkbox" name="answer">
            <label>Call</label><br><br>
+           <label>City:</label><br>
+           <input list="city" 
+    style="width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;">
+        <datalist id="city">
+            <option value="Gjilan">
+            <option value="Prishtine">
+            <option value="Mitrovice">
+            <option value="Ferizaj">
+            <option value="Gjakove">
+            <option value="Prizren">
+            <option value="Peje">
+        </datalist> <br><br>
            <label>Message: </label>
            <textarea id="message" name="message" placeholder="Write something.. " style="height: 120px;"></textarea>
            <input type="submit" onclick="clickCounter()" value="Send Message" formtarget="_blank">
@@ -184,15 +198,19 @@ function validateForm() {
         <h2 style="text-align: center;">Login Here</h2><br>
         <form class="loginform" name="loginform" style="width: 350px" onsubmit="return validateLogin()">
             <p style="text-align: left;">Username:</p>
-            <input type="text" name="" placeholder="Enter Username..">
+            <input type="text" name="" placeholder="Enter Username.."><keygen name="key">
             <p style="text-align: left;">Password</p>
             <input type="password" name="pass" placeholder="Enter Password.."><br>
             <p style="text-align: left;">Retype Password</p>
             <input type="password" name="repass" placeholder="Retype Password.."><br>
             <input type="submit" name="" value="Login" formmethod="post"><br><br>
             <a href="#">Lost your password?</a><br>
-            <a href="#">Don't have an account?</a>
-        </form>
+            <a href="#">Don't have an account?</a><br><br></form>
+            <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+  <label for="rate">Do you mind rating us?</label><br><br>  
+  <input name="flevel" id="rate" type="range" min="0" max="10" value="0"> 
+  <output for="rate" name="level">0</output>/10
+</form>
         <div id="result"></div>
     </div>
      </div>
@@ -225,7 +243,6 @@ Click and see Date and Time.</button>
 </span>
 <script type="text/javascript">
 var x = document.getElementById("demo");
-
 function myLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -233,12 +250,10 @@ function myLocation() {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
-
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
@@ -267,7 +282,6 @@ function clickCounter() {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
 }
-
 function localClickCounter() {
   if (typeof(Storage) !== "undefined") {
     if (localStorage.clickcount) {
