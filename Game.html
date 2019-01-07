@@ -2,14 +2,56 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <style>
+body{background-color: #FFDFD9;}
 canvas {
     border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    background-color:#7D4E45;
+    outline: 3px solid #7D4E45;
+  outline-offset: 2px;
 }   
+button{
+    color: #7D4E45;
+    border-radius: 10px;
+}
+
+input[type="text"]{
+    border-radius:20px;
+    width: 100px;
+}
+div {
+     outline: 3px solid #7D4E45;
+  outline-offset: 2px;
+  text-align:center;
+  width:460px; 
+  resize: vertical;
+  overflow: auto;
+  margin: 10px;
+  margin-left: 10px;
+  background-color: #7D4E45;
+  
+
+}
+
+#type {
+    font-size:12px;
+    display: inline;
+    color:#;
+
+}
+p{
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    color: #7D4E45;
+}
 </style>
 </head>
 <body onload="startGame()">
+
+   
+
+
 <script>
 
 var myGamePiece;
@@ -102,13 +144,39 @@ function clearmove() {
 </div>
 
 <p>You can move my image in four directions.</p>
-<hr>
+
+ <p>Rate our game from 1 to 10</p>
+
+<input id="rate" type="text">
+<button type="button" onclick="myFunction()">Rate</button>
+<p id="type"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("type");
+  message.innerHTML = "";
+  x = document.getElementById("rate").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 1)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
 <p>Count numbers: <output id="result"></output></p>
 <button onclick="startWorker()">Start Worker</button> 
 <button onclick="stopWorker()">Stop Worker</button>
 <script>
 var w;
 
+<script>
 function startWorker() {
   if(typeof(Worker) !== "undefined") {
     if(typeof(w) == "undefined") {
