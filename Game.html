@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="gamescript.js"></script>
 <script src="inputerror.js"></script>
+<script src="jQueryHTML.js"></script>
 <link rel="stylesheet" type="text/css" href="gamestyle.css">
 </head>
 <body onload="startGame()">
@@ -25,16 +26,9 @@
     <input id="rate" type="text">
     <button type="button" onclick="myFunction()">Rate</button>
     <p id="type"></p>
-    <p id="hidden">You thank you for your rate!</p>
-    
-    <script>
-      $(document).ready(function(){
-        $('button').click(function(){
-          const rated = $('#rate').val()
-          $('#hidden').slideToggle().html("<p>You rated our game with " + rated);
-        });
-       });
-    </script>
+    <p id="hidden">Don't hesitate !</p>
+
+
 
     <p>Count numbers: <output id="result"></output></p>
     <button onclick="startWorker()">Start Worker</button> 
