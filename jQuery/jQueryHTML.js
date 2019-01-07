@@ -1,6 +1,6 @@
 
       $(document).ready(function(){
-        $('button').click(function(){
+        $('#rated').click(function(){
           const rated = $('#rate').val()
           switch(rated){
             case '1':
