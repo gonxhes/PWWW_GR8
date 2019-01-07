@@ -26,14 +26,14 @@
           }
           /*Aplikimi i njeres nga 3D transforms property*/
           .img1:hover{
-              -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+          	  -webkit-transform: scaleX(-1);
+  			  transform: scaleX(-1);
           }
           .img2:hover{
-            transform: rotateX(50deg);
+          	transform: rotateX(50deg);
           }
           .img3:hover{
-            transform: rotateY(50deg);
+          	transform: rotateY(50deg);
           }
         </style>
         <script type="text/javascript">
@@ -42,26 +42,9 @@
  var res = str.replace("TL", "Tech-Ly");
  document.getElementById("emri").innerHTML = res;
 }
-<<<<<<< HEAD
 
         </script>
        
-=======
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-function replaceFunction() {
-  var str = document.getElementById("emri").innerHTML; 
-  var res = str.replace("TL", "Tech-Ly");
-  document.getElementById("emri").innerHTML = res;
-}
-</script>
->>>>>>> 049acf635762b05595ffaff885b6995635ae2842
     </head>
     <body>  <header>
               <div class="nav1">
@@ -108,12 +91,8 @@ function replaceFunction() {
        <div id="container1">
         <div class="about-wrapper">
        <p>Tech-Ly tracks all the latest consumer technology breakthroughs and shows you what's new, what matters and how technology can enrich your life. We give you the information, tools and advice that will help you decide what to buy and how to get the most out of the tech in your life.</p><br>
-<<<<<<< HEAD
        
 <p onmouseover="replaceFunction()" id="emri">Each month, millions of people come to TL to:</p>
-=======
-       <p onmouseover="replaceFunction()" id="emri">Each month, millions of people come to TL to:</p>
->>>>>>> 049acf635762b05595ffaff885b6995635ae2842
        <ul class="lista">
            <li>Read the latest technology news and unbiased product reviews</li>
            <li>Find the products that are right for them</li>
@@ -189,7 +168,7 @@ function replaceFunction() {
           <div class ="about-foto"><img src="images/8.jpg" class="img3"></div>
         </div>
 </div>
-<h3 style="text-align: center;">If you got bored and wanna play a game find it <a href="game.html">here</a></h3>
+
 
 <div class="about-search">
 <p>Contact our staff!</p>  
@@ -243,6 +222,8 @@ function replaceFunction() {
   </tbody>
 </table>
 </div>
+<h3 class="about-search">If you got bored and wanna play a game find it <a href="game.html">here</a></h3><br>
+    </body
     </body>
 
 </html>
